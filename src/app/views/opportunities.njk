@@ -1,0 +1,33 @@
+<head>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="/user_partner?id={{id}}&type=cpf"><i class="material-icons">arrow_back</i></a>
+        <a>Oportunidades</a>
+        <a href="/"><i class="material-icons">close</i></a>
+    </header>
+
+    <div class="content opportunities">
+        
+            {% for opportunity in opportunities %}
+                <div class="card">
+                    <img src="https://source.unsplash.com/random/150x150" alt="">        
+                    <div class="details">
+                        <p>{{opportunity.area}}</p>
+                        <p>{{opportunity.ferramentaRotina}}</p>
+                        <p>Local: {{opportunity.endereco}}</p>
+                        <a href="/opportunity?id={{opportunity._id}}">Mais informações</a>
+                    </div>
+                    
+                </div>
+            {% endfor %}
+            
+    </div>
+
+    <input type="hidden" name="id" value={{id}}>
+    <script src="/scripts.js"></script>
+</body>

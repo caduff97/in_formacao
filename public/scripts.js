@@ -31,6 +31,14 @@ const Mask = {
         }).format(value/10000)
 
         return value
+    },
+    formatBRL(value) {
+        value = value.replace(/\D/g, "")
+
+        return new Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+        }).format(value/100)
     }
 }
 
@@ -40,5 +48,5 @@ function removeModalWelcome() {
     setTimeout(() => {
         modal.style.opacity = 0
         modal.style.top = "-100%"
-    },3000)
+    },800)
 }

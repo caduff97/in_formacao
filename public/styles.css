@@ -31,6 +31,7 @@ body,
 
 .container {
     width: 90%;
+    min-height: 81.4vh;
 }
 
 /* LOGIN PAGE */
@@ -46,7 +47,6 @@ footer {
 }
 
 form#login {
-    
     display: grid;
     grid-template-rows: 72px 72px;
     grid-gap: 35px;
@@ -171,6 +171,8 @@ header {
 
 header a {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header a i.material-icons {
@@ -186,7 +188,9 @@ header a i.material-icons:hover {
 }
 
 /* SIGN UP PAGE */
-.signup {
+.signup,
+.user,
+.createopportunity {
     background-color: #ADF5A8;
     width: 100%;
     height: 100%;
@@ -197,7 +201,8 @@ header a i.material-icons:hover {
     font-size: 18px;
 }
 
-.signup form {
+.signup form,
+.createopportunity form {
     display: grid;
 }
 
@@ -205,10 +210,12 @@ header a i.material-icons:hover {
     width: 100px;
     height: 100px;
 
+    box-shadow: 2px 2px 2px -3px rgba(28, 28, 28, 0.9);
     object-fit: cover;
 }
 
-.signup .item {
+.signup .item,
+.createopportunity .item {
     display: flex;
     margin: 4px auto;
 }
@@ -241,4 +248,82 @@ header a i.material-icons:hover {
 .signup .item select {
     width: 265px;
     border: 1px solid black;
+}
+
+/* USER PAGE */
+.user img,
+.partner img {
+    width: 150px;
+    height: 150px;
+
+    margin: 20px auto 12px auto;
+    object-fit: cover;
+    
+    box-shadow: 2px 2px 2px -3px rgba(28, 28, 28, 0.9);
+}
+
+.user a.button,
+.partner a.button {
+    width: 260px;
+    padding: 24px 14px;
+
+    background-color: #023004;
+    color: white;
+
+    text-align: center;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+
+    margin-bottom: 37px;
+}
+
+.user a.help,
+.partner a.help {
+    color: black;
+    font-weight: bold;
+
+    margin: auto auto;
+}
+
+/* CREATE OPPORTUNITY PAGE */
+.createopportunity .item {
+    margin-top: 12px;
+}
+
+.createopportunity .item input,
+.createopportunity .item textarea {
+    width: 284px;
+    background: #E6EDE2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding: 6px 4px;
+
+    font-size: 12px;
+}
+
+.createopportunity .item textarea {
+    height: 178px;
+    resize: none;
+}
+
+.createopportunity .item input[name="valor"] {
+    width: 90px;
+}
+
+/* OPORTUNITIES PAGE */
+.opportunities {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+}
+.opportunities .card {
+    display: grid;
+    grid-template-columns: 65px 210px;
+    
+}
+
+.opportunities .card img {
+    width: 65px;
+    height: 65px;
 }

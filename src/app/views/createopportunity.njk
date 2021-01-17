@@ -1,0 +1,98 @@
+<head>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="/user_partner?id={{id}}&type=cnpj"><i class="material-icons">arrow_back</i></a>
+        <a>Cadastrar oportunidade</a>
+        <a href="/"><i class="material-icons">close</i></a>
+
+    </header>
+
+    <div class="container createopportunity">
+        <form action="/createopportunity" method="post" id="createopportunity">
+            <div class="item">
+                <div>
+                    <div>
+                        Área
+                    </div>
+                    <input
+                        type="text"
+                        name="area"
+                        required>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    <div>
+                        Carga Horária (horas)
+                    </div>
+                    <input
+                        type="number"
+                        name="cargaHoraria"
+                        required>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    <div>
+                        Ferramenta / Rotina a ser ensinada
+                    </div>
+                    <input
+                        type="text"
+                        name="ferramentaRotina"
+                        required>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    <div>
+                        Endereço
+                    </div>
+                    <input
+                        type="text"
+                        name="endereco"
+                        required>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    <div>
+                        Descreva a oportunidade
+                    </div>
+                    <textarea
+                        type="text"
+                        name="sobre"
+                        required></textarea>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    <div>
+                        Valor
+                    </div>
+                    <input
+                        type="text"
+                        name="valor"
+                        required
+                        onkeypress="Mask.apply(this, 'formatBRL')">
+                </div>
+            </div>
+            <input type="hidden" name="usuario" value="{{id}}">
+        </form>
+    </div>
+
+    
+
+    <footer>
+        <button form="createopportunity" type="submit"><i class="material-icons">check</i></button>
+        <a href="#"><i class="material-icons">info</i></a>
+        <button form="createopportunity" type="reset"><i class="material-icons">backspace</i></button>
+    </footer>
+
+    <script src="/scripts.js"></script>
+</body>
+
