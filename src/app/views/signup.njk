@@ -1,0 +1,151 @@
+<head>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="/"><i class="material-icons">arrow_back</i></a>
+        <a href="#"></a>
+        <a href="#"><i class="material-icons">close</i></a>
+
+    </header>
+
+    <div class="container signup">
+        <h1>Cadastro</h1>
+        <form action="/createuser" method="post" id="createuser">
+            <img src="https://images.vexels.com/media/users/3/129616/isolated/preview/fb517f8913bd99cd48ef00facb4a67c0-silhueta-de-avatar-de-empres-aacute-rio-by-vexels.png" alt="avatar">
+            <div class="item">
+                <div>
+                    <div>Tipo</div>
+                    <select name="type" required>
+                        <option value="" selected disabled></option>
+                        <option value="cpf">Aluno</option>
+                        <option value="cnpj">Empresa</option>
+                    </select>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    <div>
+                        Nome/Razão Social
+                    </div>
+                    <input
+                        type="text"
+                        name="nome"
+                        required>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    <div>
+                        CPF/CNPJ
+                    </div>
+                    <input
+                        type="text"
+                        name="login"
+                        required
+                        onkeypress="Mask.apply(this, 'formatCPF')">
+                </div>
+            </div>
+            <div class="place">
+                <div class="item">
+                    <div>
+                        <div>
+                            CEP
+                        </div>
+                        <input
+                            type="text"
+                            name="cep">
+                    </div>
+                </div>
+                <div class="item">
+                    <div>
+                        <div>
+                            Estado
+                        </div>
+                        <input
+                            type="text"
+                            name="estado">
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    <div>
+                        Cidade
+                    </div>
+                    <input
+                        type="text"
+                        name="cidade">
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    <div>
+                        Bairro
+                    </div>
+                    <input
+                        type="text"
+                        name="bairro">
+                </div>
+            </div>
+            <div class="place2">
+                <div class="item">
+                    <div>
+                        <div>
+                            Rua
+                        </div>
+                        <input
+                            type="text"
+                            name="rua">
+                    </div>
+                </div>
+                <div class="item">
+                    <div>
+                        <div>
+                            Número
+                        </div>
+                        <input
+                            type="number"
+                            name="numero">
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    <div>
+                        Senha
+                    </div>
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="senha de 8 dígitos"
+                        required>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    <div>
+                        Confirmação da senha
+                    </div>
+                    <input
+                        type="password"
+                        name="confirmpass"
+                        placeholder="senha de 8 dígitos"
+                        required>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <button form="createuser" type="submit"><i class="material-icons">check</i></button>
+        <a href="#"><i class="material-icons">info</i></a>
+        <button form="createuser" type="reset"><i class="material-icons">backspace</i></button>
+    </footer>
+
+    <script src="/scripts.js"></script>
+</body>
+

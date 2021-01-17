@@ -1,0 +1,56 @@
+<head>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+
+<body onload="removeModalWelcome()">
+    <div class="modalwelcome">
+        <img src="https://cdn.discordapp.com/attachments/797496906191470645/800175002149453874/images.jpg" alt="" id="logo">
+        <p>Seja bem vindo ao <strong>In</strong> Formação <br /> um app que conecta <br /> jovens e empresas.</p>
+    </div>
+    
+    <div class="container">
+        <img src="https://cdn.discordapp.com/attachments/797496906191470645/800175002149453874/images.jpg" alt="" id="logo">
+        <form id="login" method="post" action="/login">
+            <div class="item">
+                <div>
+                    <input
+                        type="text"
+                        name="login"
+                        placeholder="CPF/CNPJ"
+                        required
+                        onkeypress="Mask.apply(this, 'formatCPF')">
+                </div>
+            </div>
+
+            <div class="item">
+                <div>
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Senha"
+                        required
+                        >
+                </div>
+            </div>
+
+        </form>
+
+        <form id="signup" method="post" action="/signup"></form>
+
+        <button id="login" type="submit" form="login">Entrar</button>
+        <button id="signup" type="submit" form="signup">Cadastre-se</button>
+
+        <a href="#">Recuperar senha</a>
+    </div>
+
+    <footer>
+        <a href="#"><img src="https://cdn2.iconfinder.com/data/icons/linkedin-ui-flat/48/LinkedIn_UI-03-512.png" alt="Linkedin"></a>
+        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp"></a>
+        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png" alt="Instagram"></a>
+    </footer>
+
+    <script src="/scripts.js"></script>
+</body>
+

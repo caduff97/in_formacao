@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+
+    text-decoration: none;
+    list-style-type: none;
+    border: none;
+}
+
+html, body {
+    min-height: 100vh;
+    min-width: 100vh;
+}
+
+body {
+    position: relative;
+    width: 360px;
+
+    font-family: 'Roboto', sans-serif;   
+}
+
+body,
+.container,
+.modalwelcome {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 90%;
+}
+
+/* LOGIN PAGE */
+
+img#logo {
+    margin: 18px auto 74px auto;
+    width: 121px;
+    height: 121px;
+}
+
+footer {
+    margin-top: auto;
+}
+
+form#login {
+    
+    display: grid;
+    grid-template-rows: 72px 72px;
+    grid-gap: 35px;
+}
+
+form#login .item {
+    display: flex;
+}
+
+form#login .item input {    
+    width: 265px;
+    
+    font-size: 18px;
+
+    padding: 18px 3px;
+
+    background: rgba(196, 188, 188, 0.8);
+    opacity: 0.7;
+    border-radius: 10px;
+}
+
+button {
+    border-radius: 10px;
+
+    border: 3px solid #023004;
+
+    color: #023004;
+
+    cursor: pointer;
+}
+
+button#login {
+    margin: 35px auto 19px auto;
+    width: 170px;
+    
+    font-size: 18px;
+    line-height: 36px;
+
+    padding: 12px 2px;
+}
+
+button#signup {
+    margin: 0 auto 9px auto;
+    width: 115px;
+    
+    font-size: 18px;
+    line-height: 36px;
+
+    border-color: #0BFD06;
+    padding: 2px;
+}
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    height: 62px;
+
+    background-color: #023004;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    align-items: center;
+}
+
+footer img {
+    margin: auto auto;
+    width: 34px;
+    height: 34px;
+}
+
+footer button i.material-icons,
+footer a i.material-icons {
+    font-size: 42px;
+    color: white;
+    background-color: #023004;
+}
+
+footer a i.material-icons {
+    color: white;
+}
+
+/* MODAL WELCOME */
+.modalwelcome {
+    position: absolute;
+
+    background-color: white;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 100;
+
+    transition: opacity 400ms;
+}
+
+.modalwelcome img#logo {
+    width: 258px;
+    height: 258px;
+
+    margin: 82px auto 39px auto ;
+}
+
+.modalwelcome p {
+    text-align: center;
+
+    font-size: 18px;
+    line-height: 36px;
+}
+
+/* HEADER */
+header {
+    height: 62px;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+
+    background-color: #3B783D;
+}
+
+header a {
+    display: flex;
+}
+
+header a i.material-icons {
+    font-size: 42px;
+    
+    margin: auto auto;
+
+    color: white;
+}
+
+header a i.material-icons:hover {
+    font-size: 52px;
+}
+
+/* SIGN UP PAGE */
+.signup {
+    background-color: #ADF5A8;
+    width: 100%;
+    height: 100%;
+}
+
+.signup h1 {
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.signup form {
+    display: grid;
+}
+
+.signup img {
+    width: 100px;
+    height: 100px;
+
+    object-fit: cover;
+}
+
+.signup .item {
+    display: flex;
+    margin: 4px auto;
+}
+
+.signup .place {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.signup .place2 {
+    display: grid;
+    grid-template-columns: 171px 75px;
+    grid-gap: 20px;
+}
+
+.signup .place .item input {
+    width: 122px;
+}
+
+.signup .place2 .item input[name="rua"] {
+    width: 171px;
+}
+
+.signup .place2 .item input[name="numero"] {
+    width: 75px;
+}
+
+.signup .item input,
+.signup .item select {
+    width: 265px;
+    border: 1px solid black;
+}
