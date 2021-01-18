@@ -12,19 +12,21 @@
     </header>
 
     <div class="content opportunities">
-        
-            {% for opportunity in opportunities %}
-                <div class="card">
-                    <img src="https://source.unsplash.com/random/150x150" alt="">        
-                    <div class="details">
-                        <p>{{opportunity.area}}</p>
-                        <p>{{opportunity.ferramentaRotina}}</p>
-                        <p>Local: {{opportunity.endereco}}</p>
-                        <a href="/opportunity?id={{opportunity._id}}">Mais informações</a>
+            <div class="cards">
+                {% for opportunity in opportunities %}
+                    <div class="card">
+                        <div>
+                            <img src="https://source.unsplash.com/random/150x150" alt="">        
+                            <div class="details">
+                                <p>{{opportunity.area}}</p>
+                                <p>{{opportunity.ferramentaRotina}}</p>
+                                <p>Local: {{opportunity.endereco}}</p>
+                            </div>
+                        </div>
+                        <a class="button" href="/opportunity?id={{opportunity._id}}">Mais informações</a>
                     </div>
-                    
-                </div>
-            {% endfor %}
+                {% endfor %}
+            </div>
             
     </div>
 
